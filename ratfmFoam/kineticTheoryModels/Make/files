@@ -20,4 +20,4 @@ granularPressureModel/granularPressureModel/granularPressureModel.C
 granularPressureModel/granularPressureModel/newGranularPressureModel.C
 granularPressureModel/Lun/LunPressure.C
 
-LIB = $(FOAM_USER_LIBBIN)/libkineticTheoryModelS
+LIB = $(FOAM_USER_LIBBIN)/libkineticTheoryModel
