@@ -16,7 +16,8 @@ if (turbulence2)
     // Construct production term
     volScalarField G(2*nut2*magSqr(symm(fvc::grad(U2))));
 
-    #include "../wallManipulation/enhancedWallFunctions.H"
+    //#include "../wallManipulation/enhancedWallFunctions.H"
+    #include "../wallManipulation/wallFunctions.H"
 
     // Dissipation equation
     fvScalarMatrix epsEqn

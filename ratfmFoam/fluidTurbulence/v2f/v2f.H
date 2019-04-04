@@ -12,7 +12,7 @@ if (turbulence2)
     dragCoup.max(1e-8);
 
 	// Coupling in vel-pres model
-	volScalarField vCoup = sqrt((2/3)*v2*k1);
+	volScalarField vCoup = sqrt(v2*((2/3)*k1));
 	/*if(dispersedkEpsilon)
 	{
 		vCoup = sqrt((2/3)*v2*k1);
@@ -99,8 +99,8 @@ if (turbulence2)
       ==
         min(k2*f2, -alpha + C2*G)
       - fvm::Sp(N*epsilon2/k2, v2)
-     // + dragCoup*vCoup
-     // - fvm::SuSp(dragCoup, v2)
+      + dragCoup*vCoup
+      - fvm::SuSp(dragCoup, v2)
     );
     v2Eqn.relax();
     v2Eqn.solve();
